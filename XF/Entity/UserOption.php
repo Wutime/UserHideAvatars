@@ -16,6 +16,7 @@ class UserOption extends XFCP_UserOption
 
 	}
 
+	/*
 	protected function _setupDefaults()
 	{
 		$options = \XF::options();
@@ -23,5 +24,5 @@ class UserOption extends XFCP_UserOption
 		$defaults = $options->registrationDefaults;
 		$this->wutime_userhideavatars_enable = $defaults['wutime_userhideavatars_enable'] ? true : false;
 	}
-
+	*/
 }
