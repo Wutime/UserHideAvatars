@@ -6,4 +6,23 @@
 
 $0]]></replace>
   </modification>
+  <modification type="public" template="message_macros" modification_key="wutime_userhideavatars_message_macros" description="Hide or show the avatar" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[		<div class="message-avatar {{ ($xf.options.showMessageOnlineStatus && $user && $user.isOnline()) ? 'message-avatar--online' : '' }}">
+			<div class="message-avatar-wrapper">
+				<xf:avatar user="$user" size="m" defaultname="{$fallbackName}" itemprop="image" />
+				<xf:if is="$xf.options.showMessageOnlineStatus && $user && $user.isOnline()">
+					<span class="message-avatar-online" tabindex="0" data-xf-init="tooltip" data-trigger="auto" title="{{ phrase('online_now')|for_attr }}"></span>
+				</xf:if>
+			</div>
+		</div>]]></find>
+    <replace><![CDATA[<xf:if is="!$xf.visitor.Option.wutime_userhideavatars_enable">
+$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="wutime_userhideavatars_quick_reply_macros" description="Disable avatar on quick reply" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:avatar user="$user" size="{{ $simple ? 's' : 'm' }}" defaultname="" />]]></find>
+    <replace><![CDATA[<xf:if is="!$xf.visitor.Option.wutime_userhideavatars_enable">
+$0
+</xf:if>]]></replace>
+  </modification>
 </template_modifications>

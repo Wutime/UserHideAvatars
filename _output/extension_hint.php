@@ -7,3 +7,8 @@ namespace Wutime\UserHideAvatars\XF\Entity
 {
 	class XFCP_UserOption extends \XF\Entity\UserOption {}
 }
+
+namespace Wutime\UserHideAvatars\XF\Pub\Controller
+{
+	class XFCP_Account extends \XF\Pub\Controller\Account {}
+}

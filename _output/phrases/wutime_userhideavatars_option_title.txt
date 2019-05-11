@@ -1,1 +1,1 @@
-Hide avatars from display
+Hide large avatars from displaying on post view

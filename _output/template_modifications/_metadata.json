@@ -1,5 +1,11 @@
 {
     "public/wutime_userhideavatars_account_preferences.json": {
         "hash": "b3b4297d41b4179a788cac97648b385a"
+    },
+    "public/wutime_userhideavatars_message_macros.json": {
+        "hash": "92a608081d6bd4590585aef50c053860"
+    },
+    "public/wutime_userhideavatars_quick_reply_macros.json": {
+        "hash": "79804363ce8b972a56dab76126b39d31"
     }
 }
