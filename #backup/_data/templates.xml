@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="wutime_userhideavatars_option_code" version_id="1" version_string="1.0.0 Alpha"><![CDATA[<xf:checkboxrow label="{{ phrase('wutime_userhideavatars_accessibility_title') }}">
+					<xf:option name="option[wutime_userhideavatars_enable]" checked="{$xf.visitor.Option.wutime_userhideavatars_enable}"
+						label="{{ phrase('wutime_userhideavatars_option_title') }}" />
+				</xf:checkboxrow>]]></template>
+</templates>
