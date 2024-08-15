@@ -4,3 +4,4 @@ v1.2.0
 - KEPT: backwards compatability with XF 2.2
 - FIX: user preference option not appearing on XF 2.3
 - FIX: hiding avatars not abiding by option on XF 2.3
+- ADDED: logo and ensured upload exists for download
