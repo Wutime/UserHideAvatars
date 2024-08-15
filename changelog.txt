@@ -1,0 +1,6 @@
+v1.2.0
+
+- ADDED: template modifications for XF 2.3
+- KEPT: backwards compatability with XF 2.2
+- FIX: user preference option not appearing on XF 2.3
+- FIX: hiding avatars not abiding by option on XF 2.3
