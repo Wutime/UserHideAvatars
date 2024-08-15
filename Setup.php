@@ -62,14 +62,11 @@ INSTALL
  */
 
 
-	public function installStep1() {
-		$this->setInstallUpgradeVersion();
-	}
-
-
 
 	public function installStep1()
 	{
+
+		$this->setInstallUpgradeVersion();
 
 		$this->schemaManager()->alterTable('xf_user_option', function(Alter $table)
 		{
@@ -78,29 +75,12 @@ INSTALL
 	}
 
 
-	public function uninstallStep1()
-	{
-		$this->schemaManager()->alterTable('xf_user_option', function(Alter $table)
-		{
-			$table->dropColumns(['wutime_userhideavatars_enable']); 
-		});
-	}
-
-
-
-
-
-
 
 /*
 
 UPGRADE
 
  */
-
-
-
-
 
 
 
@@ -128,12 +108,16 @@ UNINSTALL
 
  */
 
+	public function uninstallStep1()
+	{
 
-    public function uninstallStep1()
-    {
-        $this->stepX('uninstall');
-    }
-
+		$this->stepX('uninstall');
+		
+		$this->schemaManager()->alterTable('xf_user_option', function(Alter $table)
+		{
+			$table->dropColumns(['wutime_userhideavatars_enable']); 
+		});
+	}
 
 
 /*

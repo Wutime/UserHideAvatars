@@ -1,0 +1,9 @@
+{
+    "template": "message_macros",
+    "description": "XF 2.3 - Hide or show the avatar",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:avatar user=\"$user\" size=\"m\" defaultname=\"{$fallbackName}\" itemprop=\"{{ $includeMicrodata ? 'image' : '' }}\" />",
+    "replace": "<xf:if is=\"!$xf.visitor.Option.wutime_userhideavatars_enable\">\n$0\n</xf:if>"
+}

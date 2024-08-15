@@ -1,0 +1,11 @@
+{
+    "additional_files": [
+
+    ],
+    "minify": [
+
+    ],"exec": [
+        "rm -rf _build/upload/src/addons/{addon_id}/*.sh",
+        "rm -rf _build/upload/src/addons/{addon_id}/*.txt"
+    ]
+}

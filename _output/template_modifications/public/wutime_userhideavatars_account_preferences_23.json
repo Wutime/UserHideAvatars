@@ -1,0 +1,9 @@
+{
+    "template": "account_preferences",
+    "description": "XF 2.3 - Add option to account_preferences to hide avatars",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:macro id=\"helper_account::activity_privacy_row\" />",
+    "replace": "<xf:include template=\"wutime_userhideavatars_option_code\"/>\n\n$0"
+}
