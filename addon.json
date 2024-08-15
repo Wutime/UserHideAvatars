@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "[Wutime] Allow User to Hide Avatars",
+    "description": "Allow users to choose to hide large avatars to ensure a more friendly screen reader browsing experience.",
+    "version_id": 7,
+    "version_string": "1.1.1",
+    "dev": "Wutime",
+    "dev_url": "https://www.wutime.com",
+    "faq_url": "https://xenforo.com/community/resources/wutime-allow-user-to-hide-avatars.7174/",
+    "support_url": "https://xenforo.com/community/threads/wutime-allow-user-to-hide-avatars.165215/",
+    "extra_urls": [],
+    "require": [],
+    "icon": "wu-logo-medium.png"
+}

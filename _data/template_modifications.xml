@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="account_preferences" modification_key="wutime_userhideavatars_account_preferences" description="Add option to account_preferences to hide avatars" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro template="helper_account" name="activity_privacy_row" />]]></find>
+    <replace><![CDATA[<xf:include template="wutime_userhideavatars_option_code"/>
+
+$0]]></replace>
+  </modification>
+  <modification type="public" template="message_macros" modification_key="wutime_userhideavatars_message_macros" description="Hide or show the avatar" execution_order="1" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:avatar user="$user" size="m" defaultname="{$fallbackName}" itemprop="image" />]]></find>
+    <replace><![CDATA[<xf:if is="!$xf.visitor.Option.wutime_userhideavatars_enable">
+$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="wutime_userhideavatars_quick_reply_macros" description="Disable avatar on quick reply" execution_order="1" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:avatar user="$user" size="{{ $simple ? 's' : 'm' }}" defaultname="" />]]></find>
+    <replace><![CDATA[<xf:if is="!$xf.visitor.Option.wutime_userhideavatars_enable">
+$0
+</xf:if>]]></replace>
+  </modification>
+</template_modifications>
